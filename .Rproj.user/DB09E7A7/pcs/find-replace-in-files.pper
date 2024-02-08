@@ -1,0 +1,17 @@
+{
+    "dialog-state": {
+        "query": "into DO_2024_DENTAL_PRACTICES_STG_METRIC_DATA",
+        "path": "",
+        "regex": false,
+        "caseSensitive": false,
+        "wholeWord": false,
+        "filePatterns": [],
+        "useGitGrep": false,
+        "excludeGitIgnore": true,
+        "excludeFilePatterns": [],
+        "resultsCount": 21,
+        "errorCount": 0,
+        "replaceErrors": "",
+        "projectRelative": true
+    }
+}
