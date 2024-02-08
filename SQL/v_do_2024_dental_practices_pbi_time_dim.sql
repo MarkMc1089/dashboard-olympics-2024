@@ -1,4 +1,4 @@
-create or replace view V_INT651_PBI_TIME_DIM as
+create or replace view V_DO_2024_DENTAL_PRACTICES_PBI_TIME_DIM as
 /*
 INT#651 Service Uptake Insights
 Reference Table : Time Periods
@@ -28,7 +28,7 @@ select      dat.PERIOD_CATEGORY,
             ymd.MONTH_IN_WORDS  as MONTH,
             ymd.CALENDAR_YEAR,
             ymd.FINANCIAL_YEAR
-from        DALL_REF.INT651_PBI_METRIC_DATA dat
+from        DO_2024_DENTAL_PRACTICES_PBI_METRIC_DATA dat
 left join   DIM.YEAR_MONTH_DIM              ymd on  dat.PERIOD  =   ymd.YEAR_MONTH
 group by    dat.PERIOD_CATEGORY,
             dat.PERIOD,

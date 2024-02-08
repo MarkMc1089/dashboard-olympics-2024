@@ -303,6 +303,21 @@ BEGIN
 --            ;
 --            commit;
 
+-----PPC Metric Analysis------------------------------------------------------------------------------------------------------------------------------
+    --refresh the time period lookup by clearing and repopulating to ensure all months are captured
+            delete
+                from    DO_2024_DENTAL_PRACTICES_PBI_TIME_DIM
+                where   1=1
+            ;
+            commit;
+        
+            insert /*+ append */ 
+                into DO_2024_DENTAL_PRACTICES_PBI_TIME_DIM
+                select  * 
+                from    V_DO_2024_DENTAL_PRACTICES_PBI_TIME_DIM
+            ;
+            commit;
+
 --    END IF;
 
 END;
